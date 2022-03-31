@@ -9,6 +9,11 @@
     <artifactId>canal.admin-web</artifactId>
     <name>canal admin-web for otter ${project.version}</name>
     <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.0.20.RELEASE</version>
+        </dependency>
     	<dependency>
 			<groupId>com.alibaba.otter</groupId>
 			<artifactId>canal.protocol</artifactId>
@@ -18,6 +23,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>spring-web</artifactId>
+                    <groupId>org.springframework</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
